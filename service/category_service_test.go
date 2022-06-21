@@ -1,14 +1,13 @@
 package service
 
 import (
-	"golang-unit-test/repository"
+	"golang-unit-test/entity"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/mock"
 )
 
-var categoryRepository = &repository.CategoryRepositoryMock{Mock: mock.Mock{}}
+/**var categoryRepository = &repository.CategoryRepositoryMock{Mock: mock.Mock{}}
 var categoryService = CategoryService{Repository: categoryRepository}
 
 func TesCategoryService_Get(t *testing.T) {
@@ -20,9 +19,9 @@ func TesCategoryService_Get(t *testing.T) {
 	assert.Nil(t, category)
 	assert.NotNil(t, err)
 
-}
+}*/
 
-/**func TestCategoryService_GetSuccess(t *testing.T) {
+func TestCategoryService_GetSuccess(t *testing.T) {
 	category := entity.Category{
 		Id:   "1",
 		Name: "Laptop",
@@ -35,4 +34,4 @@ func TesCategoryService_Get(t *testing.T) {
 	assert.Equal(t, category.Id, result.Id)
 	assert.Equal(t, category.Name, result.Name)
 
-}*/
+}
