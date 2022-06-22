@@ -1,4 +1,5 @@
 /**
+
 =========================PENGENALAN SOFTWARE TESTING=========================
 
 ~Software testing adalah salah satu disiplin ilmu dalam software engineering.
@@ -184,9 +185,17 @@
 ~ Untuk menjalankan seluruh benchmark di module, kita bisa menggunakan perintah sama seperti test, namun ditambahkan parameter bench: go test -v -bench=.
 ~ Jika kita ingin menjalankan benchmark tanpa unit test, kita bisa gunakan perintah : go test -v -run=NotMathUnitTest -bench=.
 ~ Kode diatas selain menjalankan benchmark, akan menjalankan unit test juga, jika kita hanya ingin menjalankan benchmark tertentu, kita bisa gunakan perintah:
-  go test -v -run=NotMathUnitTest -bench=BenchmarkTest  
+  go test -v -run=NotMathUnitTest -bench=BenchmarkTest
 ~ Jika kita menjalankan bencchmark di root module dan ingin semua module dijalankan, kita bisa gunakan perintah : go test -v -bench=../...
 
+== Table Benchmark == 
+~ Sama seperti di uniit test, programmer Go-Lang terbiasa membuat table benchmark juga
+~ Ini digunakan agar kita bisa mudah melakukan performance test dengan kombinasi data berbeda-beda tanpa harus membuat 
+  Banyak benchmark function.
 
 
-*/
+
+
+
+
+**/

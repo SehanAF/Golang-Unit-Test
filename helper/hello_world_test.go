@@ -1,5 +1,3 @@
-// Contoh Code
-
 package helper
 
 import (
@@ -11,6 +9,32 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+// ini adalah Table Benchmark
+func BenchmarkTable(b *testing.B) {
+	benchmarks := []struct {
+		name    string
+		request string
+	}{
+		{
+			name:    "Sehan",
+			request: "Sehan",
+		},
+		{
+			name:    "Givi",
+			request: "Givi",
+		},
+	}
+
+	for _, benchmark := range benchmarks {
+		b.Run(benchmark.name, func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				HelloWorld(benchmark.request)
+			}
+		})
+	}
+}
+
+// ini adalah Benchmark
 func BenchmarkHelloWorld(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		HelloWorld("Sehan")
@@ -117,5 +141,3 @@ func TestHelloWorldGivi(t *testing.T) {
 
 	fmt.Println("TesHelloWordlGivi Done")
 }
-
-
