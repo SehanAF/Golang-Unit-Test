@@ -9,6 +9,15 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+/*func TestHelloWorld(t *testing.T) {
+	result := HelloWorld("Sehan")
+
+	if result != "Hello Sehan" {
+		//error //v adalah verbos
+		panic("Result is not 'Hello Sehan'")
+	}
+}*/
+
 // ini adalah Table Benchmark
 func BenchmarkTable(b *testing.B) {
 	benchmarks := []struct {
@@ -126,7 +135,6 @@ func TestHelloWorld(t *testing.T) {
 	if result != "Hello Sehan" {
 		//Error
 		t.Error("Result is no Hello Sehan")
-	}
 
 	fmt.Println("TestHelloWorldSehan Done")
 }
@@ -140,4 +148,6 @@ func TestHelloWorldGivi(t *testing.T) {
 	}
 
 	fmt.Println("TesHelloWordlGivi Done")
+	}
 }
+
